@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure checkout at TechStore">
+    <title>Checkout - TechStore</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS: styles specific to the checkout form and order summary */
+        main{display:block;gap:1rem}
+        main > aside{background:#f8fafc;padding:.8rem;border-radius:8px;margin:1rem 0}
+        /* make order summary table clearer */
+        aside table{border-collapse:collapse;width:100%}
+        aside th, aside td{padding:.45rem;text-align:left}
+        /* highlight total row */
+        aside tr strong{color:#0b60d8}
+        /* larger primary submit button style fallback */
+        button[type=submit]{background:#0baf7a;color:white;border:none;border-radius:8px;padding:.7rem 1rem}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🛒 TechStore</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>🔒 Secure Checkout</h2>
+        
+        <p><strong>Order Summary:</strong> 3 items | Total: $1,451.32</p>
+        <progress value="3" max="3">Step 3 of 3</progress>
+        
+        <!-- Checkout Form -->
+        <form action="#" method="post">
+            
+            <!-- Customer Information -->
+            <section>
+                <h3>1. Customer Information</h3>
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    
+                    <p>
+                        <label for="email">Email Address: <abbr title="Required">*</abbr></label><br>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required size="40" autocomplete="email">
+                        <small>We'll send your order confirmation here</small>
+                    </p>
+                    
+                    <p>
+                        <label for="phone">Phone Number: <abbr title="Required">*</abbr></label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required size="40" autocomplete="tel">
+                    </p>
+                    
+                    <p>
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to newsletter for exclusive deals</label>
+                    </p>
+                </fieldset>
+            </section>
+
+            <!-- Shipping Address -->
+            <section>
+                <h3>2. Shipping Address</h3>
+                <fieldset>
+                    <legend>Delivery Address</legend>
+                    
+                    <p>
+                        <label for="fname">First Name: <abbr title="Required">*</abbr></label><br>
+                        <input type="text" id="fname" name="firstname" placeholder="John" required size="40" autocomplete="given-name">
+                    </p>
+                    
+                    <p>
+                        <label for="lname">Last Name: <abbr title="Required">*</abbr></label><br>
+                        <input type="text" id="lname" name="lastname" placeholder="Doe" required size="40" autocomplete="family-name">
+                    </p>
+                    
+                    <p>
+                        <label for="company">Company Name (Optional):</label><br>
+                        <input type="text" id="company" name="company" placeholder="Company Name" size="40" autocomplete="organization">
+                    </p>
+                    
+                    <p>
+                        <label for="address1">Street Address: <abbr title="Required">*</abbr></label><br>
+                        <input type="text" id="address1" name="address1" placeholder="123 Main Street" required size="40" autocomplete="address-line1">
+                    </p>
+                    
+                    <p>
+                        <label for="address2">Apartment, Suite, etc. (Optional):</label><br>
+                        <input type="text" id="address2" name="address2" placeholder="Apt 4B" size="40" autocomplete="address-line2">
+                    </p>
+                    
+                    <p>
+                        <label for="city">City: <abbr title="Required">*</abbr></label><br>
+                        <input type="text" id="city" name="city" placeholder="New York" required size="40" autocomplete="address-level2">
+                    </p>
+                    
+                    <p>
+                        <label for="state">State/Province: <abbr title="Required">*</abbr></label><br>
+                        <select id="state" name="state" required autocomplete="address-level1">
+                            <option value="">Select State</option>
+                            <option value="AL">Alabama</option>
+                            <option value="CA">California</option>
+                            <option value="FL">Florida</option>
+                            <option value="NY">New York</option>
+                            <option value="TX">Texas</option>
+                            <option value="WA">Washington</option>
+                            <!-- Add more states as needed -->
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="zip">ZIP/Postal Code: <abbr title="Required">*</abbr></label><br>
+                        <input type="text" id="zip" name="zip" placeholder="10001" required pattern="[0-9]{5}" size="20" autocomplete="postal-code">
+                    </p>
+                    
+                    <p>
+                        <label for="country">Country: <abbr title="Required">*</abbr></label><br>
+                        <select id="country" name="country" required autocomplete="country-name">
+                            <option value="US" selected>United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <input type="checkbox" id="save-address" name="save-address">
+                        <label for="save-address">Save this address for future orders</label>
+                    </p>
+                </fieldset>
+            </section>
+
+            <!-- Billing Address -->
+            <section>
+                <h3>3. Billing Address</h3>
+                <fieldset>
+                    <legend>Billing Information</legend>
+                    
+                    <p>
+                        <input type="radio" id="same-address" name="billing" value="same" checked>
+                        <label for="same-address">Same as shipping address</label><br>
+                        
+                        <input type="radio" id="diff-address" name="billing" value="different">
+                        <label for="diff-address">Use a different billing address</label>
+                    </p>
+                </fieldset>
+            </section>
+
+            <!-- Shipping Method -->
+            <section>
+                <h3>4. Shipping Method</h3>
+                <fieldset>
+                    <legend>Choose Delivery Speed</legend>
+                    
+                    <p>
+                        <input type="radio" id="standard" name="shipping-method" value="standard" checked>
+                        <label for="standard">
+                            <strong>Standard Shipping (3-5 business days)</strong> - FREE<br>
+                            <small>Estimated delivery: <time datetime="2026-02-17">February 17, 2026</time></small>
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <input type="radio" id="express" name="shipping-method" value="express">
+                        <label for="express">
+                            <strong>Express Shipping (1-2 business days)</strong> - $19.99<br>
+                            <small>Estimated delivery: <time datetime="2026-02-12">February 12, 2026</time></small>
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <input type="radio" id="overnight" name="shipping-method" value="overnight">
+                        <label for="overnight">
+                            <strong>Overnight Shipping (Next day)</strong> - $39.99<br>
+                            <small>Estimated delivery: <time datetime="2026-02-11">February 11, 2026</time></small>
+                        </label>
+                    </p>
+                </fieldset>
+            </section>
+
+            <!-- Payment Information -->
+            <section>
+                <h3>5. Payment Method</h3>
+                <fieldset>
+                    <legend>Payment Details</legend>
+                    
+                    <p><strong>Select Payment Method:</strong></p>
+                    <p>
+                        <input type="radio" id="credit-card" name="payment-method" value="credit" checked>
+                        <label for="credit-card">💳 Credit/Debit Card</label><br>
+                        
+                        <input type="radio" id="paypal" name="payment-method" value="paypal">
+                        <label for="paypal">💰 PayPal</label><br>
+                        
+                        <input type="radio" id="apple-pay" name="payment-method" value="apple">
+                        <label for="apple-pay">🍎 Apple Pay</label><br>
+                        
+                        <input type="radio" id="google-pay" name="payment-method" value="google">
+                        <label for="google-pay">📱 Google Pay</label>
+                    </p>
+                    
+                    <hr>
+                    
+                    <h4>Card Details</h4>
+                    <p>
+                        <label for="card-name">Cardholder Name: <abbr title="Required">*</abbr></label><br>
+                        <input type="text" id="card-name" name="card-name" placeholder="John Doe" required size="40" autocomplete="cc-name">
+                    </p>
+                    
+                    <p>
+                        <label for="card-number">Card Number: <abbr title="Required">*</abbr></label><br>
+                        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required pattern="[0-9\s]{13,19}" maxlength="19" size="40" autocomplete="cc-number">
+                    </p>
+                    
+                    <p>
+                        <label for="expiry-month">Expiration Date: <abbr title="Required">*</abbr></label><br>
+                        <select id="expiry-month" name="expiry-month" required autocomplete="cc-exp-month">
+                            <option value="">Month</option>
+                            <option value="01">01 - January</option>
+                            <option value="02">02 - February</option>
+                            <option value="03">03 - March</option>
+                            <option value="04">04 - April</option>
+                            <option value="05">05 - May</option>
+                            <option value="06">06 - June</option>
+                            <option value="07">07 - July</option>
+                            <option value="08">08 - August</option>
+                            <option value="09">09 - September</option>
+                            <option value="10">10 - October</option>
+                            <option value="11">11 - November</option>
+                            <option value="12">12 - December</option>
+                        </select>
+                        /
+                        <select id="expiry-year" name="expiry-year" required autocomplete="cc-exp-year">
+                            <option value="">Year</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                            <option value="2030">2030</option>
+                            <option value="2031">2031</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="cvv"><abbr title="Card Verification Value">CVV</abbr>: <abbr title="Required">*</abbr></label><br>
+                        <input type="text" id="cvv" name="cvv" placeholder="123" required pattern="[0-9]{3,4}" maxlength="4" size="10" autocomplete="cc-csc">
+                        <small>3 or 4 digits on the back of your card</small>
+                    </p>
+                    
+                    <p>
+                        <input type="checkbox" id="save-card" name="save-card">
+                        <label for="save-card">Securely save this card for future purchases</label>
+                    </p>
+                </fieldset>
+            </section>
+
+            <!-- Order Notes -->
+            <section>
+                <h3>6. Additional Information</h3>
+                <fieldset>
+                    <legend>Order Notes (Optional)</legend>
+                    
+                    <p>
+                        <label for="order-notes">Special Instructions:</label><br>
+                        <textarea id="order-notes" name="order-notes" rows="4" cols="50" placeholder="Any special delivery instructions? (e.g., Leave at front door)"></textarea>
+                    </p>
+                    
+                    <p>
+                        <label for="promo-code">Promo Code:</label><br>
+                        <input type="text" id="promo-code" name="promo-code" placeholder="SAVE10" maxlength="20">
+                        <button type="button">Apply Code</button>
+                    </p>
+                </fieldset>
+            </section>
+
+            <!-- Order Summary Sidebar -->
+            <aside>
+                <h3>📦 Order Summary</h3>
+                <table border="1" cellpadding="8" cellspacing="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Subtotal (3 items)</th>
+                            <td>$1,479.96</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Discount</th>
+                            <td>-$148.00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Shipping</th>
+                            <td>FREE</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Tax</th>
+                            <td>$119.36</td>
+                        </tr>
+                        <tr style="background-color: #f0f0f0;">
+                            <th scope="row"><strong>Total</strong></th>
+                            <td><strong style="font-size: 18px;">$1,451.32</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <details>
+                    <summary><strong>Items in your order</strong></summary>
+                    <ul>
+                        <li><img class="thumb-small" src="https://via.placeholder.com/40x30/4A90E2/ffffff?text=Phone" alt="Smartphone"> Smartphone Pro X (1x) - $999.99</li>
+                        <li><img class="thumb-small" src="https://via.placeholder.com/40x30/85DCB0/ffffff?text=Earbuds" alt="Earbuds"> Wireless Earbuds Pro (2x) - $399.98</li>
+                        <li><img class="thumb-small" src="https://via.placeholder.com/40x30/95E1D3/ffffff?text=Mouse" alt="Mouse"> Gaming Mouse Pro (1x) - $79.99</li>
+                    </ul>
+                </details>
+            </aside>
+
+            <!-- Terms and Conditions -->
+            <section>
+                <h3>7. Review & Place Order</h3>
+                <fieldset>
+                    <legend>Terms & Conditions</legend>
+                    
+                    <p>
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            I have read and agree to the <a href="#" target="_blank">Terms of Service</a> and <a href="#" target="_blank">Privacy Policy</a> <abbr title="Required">*</abbr>
+                        </label>
+                    </p>
+                    
+                    <p>
+                        <input type="checkbox" id="marketing" name="marketing">
+                        <label for="marketing">
+                            I want to receive marketing emails with exclusive offers and updates
+                        </label>
+                    </p>
+                    
+                    <p><small><strong>Note:</strong> By placing this order, you agree to our terms and conditions. Your payment information is encrypted using 256-bit <abbr title="Secure Sockets Layer">SSL</abbr> encryption.</small></p>
+                </fieldset>
+            </section>
+
+            <!-- Submit Button -->
+            <section>
+                <p>
+                    <button type="submit" style="font-size: 18px; padding: 15px 40px;">
+                        🔒 Place Order - $1,451.32
+                    </button>
+                </p>
+                <p><small>You will be charged immediately upon placing this order</small></p>
+            </section>
+        </form>
+
+        <!-- Security Badge -->
+        <aside>
+            <h3>🔒 Secure Checkout Guarantee</h3>
+            <ul>
+                <li>✓ 256-bit SSL Encryption</li>
+                <li>✓ PCI DSS Compliant</li>
+                <li>✓ Money-Back Guarantee</li>
+                <li>✓ Secure Payment Processing</li>
+            </ul>
+            <p><small>We never store your full credit card information</small></p>
+        </aside>
+
+        <!-- Customer Support -->
+        <aside>
+            <h3>📞 Need Help?</h3>
+            <p>Our customer support team is here to help:</p>
+            <address>
+                <p><strong>Phone:</strong> <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                <p><strong>Email:</strong> <a href="mailto:support@techstore.com">support@techstore.com</a></p>
+                <p><strong>Live Chat:</strong> Available 24/7</p>
+            </address>
+        </aside>
+    </main>
+
+    <footer>
+        <hr>
+        <p><small>&copy; 2026 TechStore. All rights reserved. | Secure checkout powered by TechStore Payment Systems</small></p>
+    </footer>
+</body>
+</html>
