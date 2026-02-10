@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our complete catalog of electronics and gadgets">
+    <title>Products - TechStore</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🛒 TechStore</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Our Products</h2>
+        
+        <!-- Filter Section -->
+        <aside>
+            <h3>Filter Products</h3>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Search & Filter</legend>
+                    
+                    <p>
+                        <label for="search">Search:</label><br>
+                        <input type="search" id="search" name="search" placeholder="Search products...">
+                    </p>
+                    
+                    <p>
+                        <label for="category">Category:</label><br>
+                        <select id="category" name="category">
+                            <option value="">All Categories</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="accessories">Accessories</option>
+                            <option value="smart-home">Smart Home</option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="price-range">Price Range:</label><br>
+                        <input type="range" id="price-range" name="price" min="0" max="2000" value="1000">
+                        <output for="price-range">$1000</output>
+                    </p>
+                    
+                    <p>
+                        <button type="submit">Apply Filters</button>
+                        <button type="reset">Clear</button>
+                    </p>
+                </fieldset>
+            </form>
+        </aside>
+
+        <!-- Product Catalog -->
+        <section>
+            <h3>All Products</h3>
+            
+            <!-- Product Comparison Table -->
+            <table border="1" cellpadding="10" cellspacing="0">
+                <caption><strong>Featured Products Comparison</strong></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">In Stock</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Smartphone Pro X</strong></td>
+                        <td>Smartphones</td>
+                        <td>$999.99</td>
+                        <td>⭐⭐⭐⭐⭐ (4.8/5)</td>
+                        <td><mark>In Stock</mark></td>
+                        <td>View | <button type="button">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Laptop Ultra 15</strong></td>
+                        <td>Laptops</td>
+                        <td>$1,499.99</td>
+                        <td>⭐⭐⭐⭐⭐ (4.9/5)</td>
+                        <td><mark>In Stock</mark></td>
+                        <td>View | <button type="button">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Wireless Earbuds Pro</strong></td>
+                        <td>Accessories</td>
+                        <td>$199.99</td>
+                        <td>⭐⭐⭐⭐ (4.6/5)</td>
+                        <td><mark>In Stock</mark></td>
+                        <td>View | <button type="button">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smart Watch Elite</strong></td>
+                        <td>Accessories</td>
+                        <td>$399.99</td>
+                        <td>⭐⭐⭐⭐⭐ (4.7/5)</td>
+                        <td><mark>In Stock</mark></td>
+                        <td>View | <button type="button">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>4K Monitor 32"</strong></td>
+                        <td>Accessories</td>
+                        <td>$599.99</td>
+                        <td>⭐⭐⭐⭐ (4.5/5)</td>
+                        <td><mark>In Stock</mark></td>
+                        <td>View | <button type="button">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gaming Mouse Pro</strong></td>
+                        <td>Accessories</td>
+                        <td>$79.99</td>
+                        <td>⭐⭐⭐⭐ (4.4/5)</td>
+                        <td><mark>In Stock</mark></td>
+                        <td>View | <button type="button">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smart Home Hub</strong></td>
+                        <td>Smart Home</td>
+                        <td>$149.99</td>
+                        <td>⭐⭐⭐⭐⭐ (4.8/5)</td>
+                        <td>Low Stock</td>
+                        <td>View | <button type="button">Add to Cart</button></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tablet Pro 12"</strong></td>
+                        <td>Tablets</td>
+                        <td>$799.99</td>
+                        <td>⭐⭐⭐⭐ (4.6/5)</td>
+                        <td><mark>In Stock</mark></td>
+                        <td>View | <button type="button">Add to Cart</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="6"><em>Showing 8 of 50+ products available</em></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Detailed Product Cards -->
+        <section>
+            <h3>Popular Items</h3>
+            
+            <article>
+                <h4>Smart Watch Elite</h4>
+                <figure>
+                    <img src="https://via.placeholder.com/250x200/FF6B6B/ffffff?text=Smart+Watch" alt="Smart Watch Elite" width="250" height="200">
+                    <figcaption>Track Your Health & Fitness</figcaption>
+                </figure>
+                <p><strong>Price:</strong> $399.99</p>
+                <p>Features:</p>
+                <ul>
+                    <li>Heart Rate Monitor</li>
+                    <li>GPS Tracking</li>
+                    <li>Water Resistant (50m)</li>
+                    <li>7-day Battery Life</li>
+                    <li>Sleep Tracking</li>
+                </ul>
+                <p><meter value="4.7" min="0" max="5">4.7 out of 5</meter> (287 reviews)</p>
+                <p>View Details | <button type="button">Add to Cart</button></p>
+                <hr>
+            </article>
+
+            <article>
+                <h4>4K Monitor 32"</h4>
+                <figure>
+                    <img src="https://via.placeholder.com/250x200/4ECDC4/ffffff?text=4K+Monitor" alt="4K Monitor" width="250" height="200">
+                    <figcaption>Crystal Clear 4K Display</figcaption>
+                </figure>
+                <p><strong>Price:</strong> $599.99</p>
+                <p>Features:</p>
+                <ul>
+                    <li>32" 4K UHD (3840x2160)</li>
+                    <li>HDR10 Support</li>
+                    <li>144Hz Refresh Rate</li>
+                    <li><abbr title="In-Plane Switching">IPS</abbr> Panel</li>
+                    <li>USB-C, HDMI, DisplayPort</li>
+                </ul>
+                <p><meter value="4.5" min="0" max="5">4.5 out of 5</meter> (156 reviews)</p>
+                <p>View Details | <button type="button">Add to Cart</button></p>
+                <hr>
+            </article>
+
+            <article>
+                <h4>Gaming Mouse Pro</h4>
+                <figure>
+                    <img src="https://via.placeholder.com/250x200/95E1D3/ffffff?text=Gaming+Mouse" alt="Gaming Mouse" width="250" height="200">
+                    <figcaption>Precision Gaming Mouse</figcaption>
+                </figure>
+                <p><strong>Price:</strong> $79.99 <del>$99.99</del> <mark>Save 20%!</mark></p>
+                <p>Features:</p>
+                <ul>
+                    <li>16,000 DPI Sensor</li>
+                    <li>RGB Lighting</li>
+                    <li>8 Programmable Buttons</li>
+                    <li>Ergonomic Design</li>
+                    <li>Braided Cable</li>
+                </ul>
+                <p><meter value="4.4" min="0" max="5">4.4 out of 5</meter> (423 reviews)</p>
+                <p>View Details | <button type="button">Add to Cart</button></p>
+            </article>
+        </section>
+
+        <!-- Pagination -->
+        <nav aria-label="Product pagination">
+            <p>
+                <strong>Page:</strong>
+                <a href="?page=1" aria-current="page">1</a> |
+                <a href="?page=2">2</a> |
+                <a href="?page=3">3</a> |
+                <a href="?page=2">Next →</a>
+            </p>
+        </nav>
+    </main>
+</body>
+</html>
