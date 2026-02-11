@@ -4,53 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - My Personal Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>About Me</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Lab Experiments Navigation -->
+    <nav style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 16px;">Lab Experiments:</h3>
+        <ul style="list-style: none; padding: 0; display: flex; gap: 15px; flex-wrap: wrap;">
+            <li><a href="lab_exp1/index.html">Exp 1: Basic Website</a></li>
+            <li><a href="lab_exp2/index.html">Exp 2: E-commerce</a></li>
+            <li><a href="lab_exp3/index.html">Exp 3: CSS Enhanced (Exp1)</a></li>
+            <li><a href="lab_exp4/index.html">Exp 4: CSS Enhanced (Exp2)</a></li>
+        </ul>
+    </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="site-title">About Me</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+
+    <main class="container">
         <section>
             <h2>My Story</h2>
-            <p>Hi! I'm <strong>Manish Kumar Shah</strong>, a Computer Science and Engineering student.</p>
+            <p>Hi! I'm <strong>Manish Kumar Shah</strong>, a Computer Science and Engineering student studying B.Tech CSE at Jain (Deemed-to-be) University, Mysuru. I enjoy building practical web applications and learning system design.</p>
         </section>
 
         <section>
             <h3>Education</h3>
             <ul>
-                <li><strong>Bachelor of Technology in Computer Science and Engineering </strong> - Jain Deemed to be University (2024-2028)</li>
+                <li><strong>Bachelor of Technology in Computer Science and Engineering</strong> — Jain (Deemed-to-be) University (2024–2028)</li>
             </ul>
         </section>
 
         <section>
             <h3>Skills</h3>
             <ul>
-                <li>HTML5 & CSS3</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>React</li>
+                <li>HTML5 &amp; CSS3 — responsive layouts and modern tooling</li>
+                <li>JavaScript &amp; React — interactive frontends and components</li>
+                <li>Python, Java, C/C++ — backend and algorithmic programming</li>
+                <li>SQL &amp; databases, Git, Linux</li>
             </ul>
         </section>
 
         <section>
-            <h3>Interests</h3>
-            <p>When I'm not coding, I enjoy:</p>
-            <ol>
-                <li>Reading technology blogs</li>
-                <li>Hiking and outdoor activities</li>
-                <li>Photography</li>
-            </ol>
+            <h3>Interests &amp; Campus Activities</h3>
+            <p>Active member of coding clubs, participated in hackathons and workshops on cloud technologies, and took part in campus events and tech talks. Outside academics, I enjoy photography and exploring nature.</p>
         </section>
+
+        <footer class="site-footer">
+            <small>&copy; 2026 Manish Kumar Shah</small>
+            <div class="social-links">
+                <a href="https://github.com/manish-412">GitHub</a>
+                <a href="https://www.linkedin.com/in/manish-shah098">LinkedIn</a>
+            </div>
+        </footer>
     </main>
 </body>
 </html>

@@ -4,44 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Manish Kumar Shah</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Projects</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Lab Experiments Navigation -->
+    <nav style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 16px;">Lab Experiments:</h3>
+        <ul style="list-style: none; padding: 0; display: flex; gap: 15px; flex-wrap: wrap;">
+            <li><a href="lab_exp1/index.html">Exp 1: Basic Website</a></li>
+            <li><a href="lab_exp2/index.html">Exp 2: E-commerce</a></li>
+            <li><a href="lab_exp3/index.html">Exp 3: CSS Enhanced (Exp1)</a></li>
+            <li><a href="lab_exp4/index.html">Exp 4: CSS Enhanced (Exp2)</a></li>
+        </ul>
+    </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="site-title">Projects</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+
+    <main class="container">
         <section>
             <h2>Selected Projects</h2>
-            <article>
-                <h3 style="color:#2b9348">Personal Website</h3>
-                <p>A static personal website built with HTML to showcase portfolio and contact details.</p>
-            </article>
+            <ul class="project-grid">
+                <li class="project-card">
+                    <img src="https://placehold.co/600x400?text=Personal+Website" alt="Personal Website">
+                    <h4>Personal Website</h4>
+                    <p>A responsive personal portfolio built with HTML, CSS and a touch of JavaScript to showcase work and contact details.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+                    </div>
+                </li>
 
-            <article>
-                <h3>E-commerce Demo</h3>
-                <p>A static e-commerce template demonstrating product listings, cart and checkout pages.</p>
-            </article>
+                <li class="project-card">
+                    <img src="https://placehold.co/600x400?text=E-commerce+Demo" alt="E-commerce Demo">
+                    <h4>E-commerce Demo</h4>
+                    <p>Static e-commerce template demonstrating product listings, a simple cart flow and checkout layout used in class assignments.</p>
+                    <div class="tags">
+                        <span class="tag">HTML</span><span class="tag">CSS</span>
+                    </div>
+                </li>
 
-            <article>
-                <h3>Interactive Gallery</h3>
-                <p>A simple image gallery built with semantic HTML and basic JavaScript for filtering.</p>
-            </article>
+                <li class="project-card">
+                    <img src="https://placehold.co/600x400?text=Interactive+Gallery" alt="Interactive Gallery">
+                    <h4>Interactive Gallery</h4>
+                    <p>An image gallery with category filtering and lightbox-style preview built for a web technologies lab.</p>
+                    <div class="tags">
+                        <span class="tag">JavaScript</span><span class="tag">UI</span>
+                    </div>
+                </li>
+            </ul>
         </section>
-    </main>
 
-    <footer>
-        <hr>
-        <p>&copy; 2026 Manish Kumar Shah</p>
-    </footer>
+        <footer class="site-footer">
+            <small>&copy; 2026 Manish Kumar Shah</small>
+            <div class="social-links">
+                <a href="https://github.com/manish-412">GitHub</a>
+                <a href="https://www.linkedin.com/in/manish-shah098">LinkedIn</a>
+            </div>
+        </footer>
+    </main>
 </body>
 </html>

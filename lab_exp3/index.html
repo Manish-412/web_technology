@@ -4,37 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - My Personal Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1 style="color:#ffffff;margin-bottom:.25rem;">Welcome to My Personal Website</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+    <!-- Lab Experiments Navigation -->
+    <nav style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px;">
+        <h3 style="margin: 0 0 10px 0; font-size: 16px;">Lab Experiments:</h3>
+        <ul style="list-style: none; padding: 0; display: flex; gap: 15px; flex-wrap: wrap;">
+            <li><a href="lab_exp1/index.html">Exp 1: Basic Website</a></li>
+            <li><a href="lab_exp2/index.html">Exp 2: E-commerce</a></li>
+            <li><a href="lab_exp3/index.html">Exp 3: CSS Enhanced (Exp1)</a></li>
+            <li><a href="lab_exp4/index.html">Exp 4: CSS Enhanced (Exp2)</a></li>
+        </ul>
+    </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <h1 class="site-title">Welcome to My Personal Website</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+
     <main>
-        <section>
-            <h2>Hello, I'm Manish Kumar Shah</h2>
-            <img src="https://www.iesonline.co.in/colleges-image/jain-university.jpg" alt="Jain University" width="400" height="200">
-            <p>Welcome to my personal space on the web! I'm a passionate web developer and designer.</p>
-            <p>This website showcases my work, skills, and provides a way to get in touch with me.</p>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h2>Hi, I'm Manish Kumar Shah</h2>
+                    <p class="lead">Welcome to my personal space on the web! I'm a passionate web developer and designer. This site showcases my work, skills, and a way to get in touch.</p>
+                    <p><a class="btn" href="projects.html">View Projects</a> <a class="btn ghost" href="about.html">About Me</a></p>
+                </div>
+                <div class="hero-media">
+                    <img src="https://www.iesonline.co.in/colleges-image/jain-university.jpg" alt="Jain University">
+                </div>
+            </div>
         </section>
 
-        <section>
+        <section class="features container">
             <h3>What I Do</h3>
-            <ul>
+            <ul class="features-grid">
                 <li>Web Development</li>
                 <li>UI/UX Design</li>
                 <li>Frontend Development</li>
                 <li>Responsive Design</li>
             </ul>
+        </section>
+
+        <section class="student-profile container">
+            <h3>Student Profile</h3>
+            <p>I am currently pursuing a Bachelor of Technology (B.Tech) in Computer Science and Engineering at Jain (Deemed-to-be) University, Mysuru. My coursework and hands-on labs focus on the fundamentals and practical aspects of computing, preparing me for software engineering and research roles.</p>
+            <p><strong>Relevant coursework:</strong> Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems, Operating Systems, Computer Networks, Web Technologies, Software Engineering, Machine Learning and Artificial Intelligence.</p>
+            <p><strong>Technical skills:</strong> HTML, CSS, JavaScript, React (basic), Java, Python, C/C++, SQL, Git, and exposure to Linux development tools.</p>
+            <p><strong>Projects &amp; experience:</strong> Built class projects such as an e-commerce prototype, a small chat application, and a data-analysis mini-project using Python. Participated in campus hackathons, coding clubs, and workshops on cloud and web development. Open to internships and collaborations.</p>
+            <p><strong>Interests:</strong> Web development, system design, competitive programming, machine learning, and building user-friendly applications.</p>
+            <p>If you'd like to see my projects or collaborate, check the <a class="nav-link" href="projects.html">Projects</a> page or <a class="nav-link" href="contact.html">get in touch</a>.</p>
         </section>
     </main>
 </body>

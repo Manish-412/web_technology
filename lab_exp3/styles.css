@@ -79,3 +79,72 @@ a:hover{color:#7c3aed}
 /* Header navigation should keep white text; use warm accent on hover */
 header nav a{color:white}
 header nav a:hover{background:rgba(255,255,255,0.10);color:#ffd36a;transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,0.12)}
+
+/* Container utility */
+.container{max-width:1000px;margin:0 auto;padding:0 1rem}
+
+/* Site header enhancements */
+.site-header{background:linear-gradient(90deg,var(--accent),#7c3aed);color:white;padding:1rem 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.site-title{margin:0;font-weight:600;font-size:1.25rem}
+.nav-list{display:flex;gap:0.5rem;align-items:center;margin:0;padding:0;list-style:none}
+.nav-link{color:white;padding:0.45rem 0.7rem;border-radius:8px;text-decoration:none;font-weight:600}
+.nav-link:hover{background:rgba(255,255,255,0.06);color:#ffd36a}
+
+/* Hero */
+.hero{padding:2rem 0;background:linear-gradient(180deg,rgba(250,250,255,0.6),transparent)}
+.hero-inner{display:grid;grid-template-columns:1fr 320px;gap:1.25rem;align-items:center}
+.hero-content h2{margin-top:0;color:var(--accent);font-size:1.6rem}
+.hero-content .lead{color:#374151;margin-bottom:1rem}
+.hero-media{justify-self:end}
+.hero-media img{width:320px;height:auto;object-fit:cover;border-radius:12px}
+
+/* Buttons */
+.btn{display:inline-block;background:linear-gradient(90deg,var(--accent),#7c3aed);color:white;padding:0.55rem 0.9rem;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 8px 24px rgba(26,115,232,0.12)}
+.btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(26,115,232,0.12);box-shadow:none}
+.btn + .btn{margin-left:0.6rem}
+
+/* Features grid */
+.features{margin-top:1.25rem}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.75rem;margin:0;padding:0;list-style:none}
+.features-grid li{background:var(--card);padding:0.9rem;border-radius:10px;box-shadow:0 8px 24px rgba(2,6,23,0.06);font-weight:600;text-align:center}
+
+/* Responsive tweaks */
+@media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;grid-auto-rows:auto}
+    .hero-media{justify-self:center}
+    .hero-media img{width:100%;max-width:360px}
+    .header-inner{flex-direction:column;align-items:flex-start}
+}
+
+@media (max-width:420px){
+    .site-title{font-size:1.05rem}
+    .nav-list{flex-wrap:wrap;gap:0.4rem}
+}
+
+/* Projects */
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1rem 0;padding:0;list-style:none}
+.project-card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.06);display:flex;flex-direction:column;gap:0.6rem}
+.project-card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.project-card h4{margin:0;color:#0b60d8}
+.project-card p{margin:0;color:#374151}
+.project-card .tags{display:flex;gap:0.5rem;flex-wrap:wrap;margin-top:0.5rem}
+.tag{background:rgba(11,96,216,0.08);color:#0b60d8;padding:0.25rem 0.5rem;border-radius:6px;font-size:.85rem}
+
+/* Contact form layout */
+.contact-container{max-width:880px;margin:0 auto;padding:1rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem}
+.form-row .full{grid-column:1/-1}
+label{display:block;margin-bottom:0.35rem;font-weight:600}
+input[type="text"],input[type="email"],input[type="url"],textarea{width:100%;padding:0.7rem;border:1px solid #e6e9ee;border-radius:10px;background:linear-gradient(180deg,#ffffff, #fbfdff)}
+input[type="submit"],input[type="reset"]{padding:0.6rem 0.9rem;border-radius:8px;border:none}
+
+/* Footer */
+.site-footer{max-width:1000px;margin:2rem auto;padding:1rem;background:linear-gradient(90deg,#fff,#fff7fb);border-radius:10px;color:var(--muted);display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.site-footer small{display:block}
+.social-links{display:flex;gap:0.6rem}
+.social-links a{color:var(--accent);text-decoration:none;padding:0.4rem 0.6rem;border-radius:8px;background:rgba(26,115,232,0.06)}
+
+/* Small utilities */
+.muted{color:var(--muted)}
+
